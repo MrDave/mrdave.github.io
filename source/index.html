@@ -5,7 +5,19 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <style type="text/css">
-      .button-player {
+      .player {
+        width: 800px;
+        height: 600px;
+      }
+      .player .video-container {
+        width: 100%;
+        height: 100%
+      }
+      .player .bottom-controls {
+        background-color: black;
+        height: 30px;
+      }
+      .player .player-button {
         border-style: none;
         border-color: white;
         cursor: pointer;
@@ -15,14 +27,17 @@
         width: 30px;
         text-align: center;
       }
+      .shadow {
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
     </style>
   </head>
   <body>
-    <div id="player" style="width: 800px; height: 600px;">
-      <div class="js-video-container" style="width: 100%; height: 100%"></div>
-      <div style="background-color: black; height: 30px;">
-        <button class="js-play-button button-player"><i class="fa fa-play" aria-hidden="true"></i></button>
-        <button class="js-pause-button button-player"><i class="fa fa-pause" aria-hidden="true"></i></button>
+    <div id="player" class="player shadow">
+      <div class="js-video-container video-container"></div>
+      <div class="bottom-controls">
+        <button class="js-play-button player-button"><i class="fa fa-play" aria-hidden="true"></i></button>
+        <button class="js-pause-button player-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
       </div>
       <!-- Here can be placed player controls: play and volume buttons -->
     </div>
